@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+   <h2>Calculator</h2>
+   enter a : <input id="num1" type="number"> <br><br>
+   enter b : <input id="num2" type="number"> <br><br>
+   <button onclick="add()" >add</button>
+   <button onclick="minus()" >minus</button>
+   <button onclick="multiply()" >multiply</button>
+   <button onclick="divide()" >divide</button>
+   <p id="add"> </p>
+   <script>
+    function add(){
+      const a = parseInt(document.getElementById("num1").value);
+      const b = parseInt(document.getElementById("num2").value);
+      const c = a+b ;
+      alert (c)
+      document.getElementById("add").innerHTML= c ;
+    }
+  
+    function minus(){
+      const a = parseInt(document.getElementById("num1").value);
+      const b = parseInt(document.getElementById("num2").value);
+      const c = a-b;
+      alert (c)
+      document.getElementById("add").innerHTML= "Hurrah you got sum and now you calculate diff,mult";
+    }
+
+    function multiply(){
+      const a = parseInt(document.getElementById("num1").value);
+      const b = parseInt(document.getElementById("num2").value);
+      const c = a*b;
+      alert ( c )
+      document.getElementById("add" ).innerHTML= c;
+    }
+
+    function divide(){
+      const a = parseInt(document.getElementById("num1").value);
+      const b = parseInt(document.getElementById("num2").value);
+      const c = a/b;
+      alert (c)
+      document.getElementById("add").innerHTML= c;
+    }
+   </script>
+</body>
+</html>
