@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body,html{
+    padding: 0%;
+    height: 100%;
+
+  }
+
+  .container{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10;
+  }
+  .box{
+    background-color: rgb(110, 238, 255);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box">
+  principle: <input id="principle" type="number" placeholder="principle">
+  <br>
+  <br>
+
+  interest rate: <input id="interest" type="number" placeholder="intrest rate">
+   <br>
+   <br>
+   tenure: <input id="tenure" type="number">
+   <br>
+   <br>
+   <button onclick="calc()">calculate</button>
+   <p id="ans"></p>
+  </div>
+</div>
+  
+
+   <script>
+     function calc(){
+      let p = parseInt(document.getElementById("principle").value)
+      let i = parseInt(document.getElementById("interest").value)
+      let t = parseInt(document.getElementById("tenure").value)
+      
+      let res = ((p*i)/100+p);
+      let ans = res/t;
+
+      alert(ans)
+
+     }
+   </script>
+
+
+</body>
+</html>
